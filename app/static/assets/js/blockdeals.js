@@ -177,7 +177,7 @@ function update_votes(e) {
         $(e).find(".upVote").text(up);
         $(e).find(".dnVote").text(dn);
         $(e).find(".comments").text(post.children);
-        var dollhairs = "$"+parseFloat(post.pending_payout_value.split(" ")[0]).toFixed(2);
+        var dollhairs = "$"+(parseFloat(post.pending_payout_value.split(" ")[0])+parseFloat(post.total_payout_value.split(" ")[0])).toFixed(2);
         $(e).find(".payout").text(dollhairs);
         if (me > 0) {
           $(e).find(".upVoteThumb").addClass('green-text');
